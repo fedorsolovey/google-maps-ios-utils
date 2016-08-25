@@ -23,6 +23,7 @@
 
 #import "GMUClusterIconGenerator.h"
 #import "GMUWrappingDictionaryKey.h"
+#import "MapPoint.h"
 
 // Clusters smaller than this threshold will be expanded.
 static const NSUInteger kGMUMinClusterSize = 4;
@@ -299,6 +300,10 @@ static const double kGMUAnimationDuration = 0.5;  // seconds.
     marker.icon = clusterIcon;
     marker.groundAnchor = CGPointMake(0.5, 0.5);
   }
+  else {
+      marker.icon = [self iconForData:marker.userData];
+  }
+    
   marker.map = _mapView;
 
   if (animated) {
@@ -358,6 +363,11 @@ static const double kGMUAnimationDuration = 0.5;  // seconds.
     marker.userData = nil;
     marker.map = nil;
   }
+}
+
+- (UIImage *)iconForData:(MapPoint *)userData
+{
+    return userData.icon;
 }
 
 @end
