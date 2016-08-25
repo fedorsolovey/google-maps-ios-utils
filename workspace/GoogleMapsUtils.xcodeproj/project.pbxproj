@@ -41,10 +41,10 @@
 		02F87C011D20B64100C65016 /* m5.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F87BED1D20B53B00C65016 /* m5.png */; };
 		02F87C071D20B68F00C65016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F87BF01D20B53B00C65016 /* LaunchScreen.storyboard */; };
 		02F87C081D20B68F00C65016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F87BF21D20B53B00C65016 /* Main.storyboard */; };
-		56EAA0C21D6F1B4400D6BA5A /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAA0BF1D6F1AD400D6BA5A /* MapPoint.m */; };
 		56EAA0C51D6F215E00D6BA5A /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EAA0C41D6F215E00D6BA5A /* GoogleMaps.framework */; };
 		56EAA0C71D6F21A400D6BA5A /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56EAA0C61D6F21A400D6BA5A /* GoogleMaps.bundle */; };
 		56EAA0C91D6F226500D6BA5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EAA0C81D6F226500D6BA5A /* Images.xcassets */; };
+		56EAA0CC1D6F348000D6BA5A /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAA0CB1D6F348000D6BA5A /* MapPoint.m */; };
 		8869518CED7812A43442DF2E /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EB71F39B4F31FF9127AD8B /* libPods-UnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -146,11 +146,11 @@
 		02F87BF31D20B53B00C65016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		50EB71F39B4F31FF9127AD8B /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53445BB14EDF62D1E1AD8652 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		56EAA0BE1D6F1AD400D6BA5A /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapPoint.h; path = ../src/Models/MapPoint.h; sourceTree = "<group>"; };
-		56EAA0BF1D6F1AD400D6BA5A /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapPoint.m; path = ../src/Models/MapPoint.m; sourceTree = "<group>"; };
 		56EAA0C41D6F215E00D6BA5A /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		56EAA0C61D6F21A400D6BA5A /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		56EAA0C81D6F226500D6BA5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DevApp/Images.xcassets; sourceTree = "<group>"; };
+		56EAA0CA1D6F348000D6BA5A /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapPoint.h; path = ../MapPoint.h; sourceTree = "<group>"; };
+		56EAA0CB1D6F348000D6BA5A /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapPoint.m; path = ../MapPoint.m; sourceTree = "<group>"; };
 		B9EE8E409C4A0A85BD71034D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E1C33F91BBBAC7D75ACDD593 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +258,8 @@
 				0242D1901C7C19E600557130 /* GMUSimpleClusterAlgorithm.m */,
 				023320811CB20086008024F2 /* GMUWrappingDictionaryKey.h */,
 				023320821CB20086008024F2 /* GMUWrappingDictionaryKey.m */,
+				56EAA0CA1D6F348000D6BA5A /* MapPoint.h */,
+				56EAA0CB1D6F348000D6BA5A /* MapPoint.m */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -432,8 +434,6 @@
 		56EAA0C11D6F1ADB00D6BA5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				56EAA0BE1D6F1AD400D6BA5A /* MapPoint.h */,
-				56EAA0BF1D6F1AD400D6BA5A /* MapPoint.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -626,7 +626,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EAA0C21D6F1B4400D6BA5A /* MapPoint.m in Sources */,
 				0242D1A81C7C19E600557130 /* GMUStaticCluster.m in Sources */,
 				0242D1AA1C7C19E600557130 /* GMUDefaultClusterRenderer.m in Sources */,
 				0242D1B31C7C19F700557130 /* GQTPointQuadTree.m in Sources */,
@@ -648,6 +647,7 @@
 				02F87BFA1D20B61000C65016 /* POIItem.m in Sources */,
 				02F87BFB1D20B61000C65016 /* main.m in Sources */,
 				02F87BFC1D20B61000C65016 /* AppDelegate.m in Sources */,
+				56EAA0CC1D6F348000D6BA5A /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
